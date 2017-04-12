@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style media="screen">
+    html, body {
+      padding: 0;
+      border: 0;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #E3E3E3
+    }
+
+    .coupon {
+      padding: 20px;
+      margin: 0 0px 40px 0;
+      border: 1px dotted #000;
+      width: 260px;
+      background-color: #fff;
+    }
+
+    .disc {
+      font-size: 10px;
+    }
+
+    h1 {
+      font-size: 40px;
+    }
+
+    h1 b {
+      font-size: 20px;
+    }
+
+    .price {
+      font-size: 50px;
+    }
+
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="load">
+      </div>
+    </div>
+    <script type="text/javascript">
+    $(document).ready(function() {
+      $.ajax({
+        url: 'https://www.mazdausa.com/webservices/mx/carCareCoupon/50237',
+        type: 'GET',
+        dataType: 'xml',
+        success: xmlParser
+      });
+    });
+
+    function xmlParser(xml) {
+      $('#load').fadeOut();
+
+      $(xml).find('coupon').each(function() {
+        var servicesPlez = $(this).find('services').find('service').text();
+
+        $('#container').append(
+          `<div class="coupon">
+            <h3>${$(this).find('title').text()}</h3>
+            <h1>${$(this).find('deal').text()}</h1>
+            <p class='desc'>${$(this).find('description').text()}</p>
+              <p>${servicesPlez}</p>
+            <p id='test' class="disc">${$(this).find('disclaimer').text()}</p>
+          </div>`
+        );
+      });
+      $("body").children().each(function () {
+          $(this).html( $(this).html().replace(/39.95/g,'<span class="price">69.95</span>') );
+      });
+
+      $("body").children().each(function () {
+          $(this).html( $(this).html().replace(/59.95/g,'<span class="price">89.95</span>') );
+      });
+
+      $("body").children().each(function () {
+          $(this).html( $(this).html().replace(/Inspect\/adjust caster, camber and toe-in as applicableInspect suspension and steering linkageCheck tire wearCheck tire pressure, adjust as necessaryComputerized alignmentRoad test/g,`
+            <ul>
+              <li>Inspect/adjust caster, camber and toe-in as applicable</li>
+              <li>Inspect suspension and steering linkage</li>
+              <li>Check tire wear</li>
+              <li>Check tire pressure, adjust as necessary</li>
+              <li>Computerized alignment</li>
+              <li>Road test</li>
+            </ul>
+            `) );
+      });
+
+
+
+    }
+    </script>
+  </body>
+</html>
