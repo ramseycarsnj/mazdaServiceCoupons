@@ -39,7 +39,7 @@ function xmlParser(xml) {
           <li>Check tire wear</li>
           <li>Check tire pressure, adjust as necessary</li>
           <li>Computerized alignment</li>
-          <li>Road test</li>  
+          <li>Road test</li>
         </ul>
         `) );
   });
