@@ -1,0 +1,1 @@
+function xmlParser(t){$("#load").fadeOut(),$(t).find("coupon").each(function(){$("#container").append('<div class="coupon"><h1>'+$(this).find("title").text()+"</h1></div>")})}$(document).ready(function(){$.ajax({url:"http://joethemovie.com/testBedHosting/test.xml",type:"GET",dataType:"xml",success:xmlParser})});

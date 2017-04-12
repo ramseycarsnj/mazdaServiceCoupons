@@ -1,0 +1,25 @@
+html, body {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #E3E3E3; }
+
+.coupon {
+  padding: 20px;
+  margin: 0 0px 40px 0;
+  border: 1px dotted #000;
+  width: 600px;
+  background-color: #fff; }
+
+.disc {
+  font-size: 10px; }
+
+h1 {
+  font-size: 40px; }
+
+h1 b {
+  font-size: 20px; }
+
+.price {
+  font-size: 50px; }

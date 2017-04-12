@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<result status="ok">
+<coupons> <coupon id="1">
+<title>Coupon 1 Title</title> <deal>$99.00</deal> <descriptions> <description>
+Some description A for coupon 1 ... </description>
+<description>
+Some description B for coupon 1 ... </description>
+</descriptions> <services>
+<service>
+Service A for coupon 1 ...
+</service> <service>
+Service B for coupon 1 ... </service>
+</services>
+<disclaimer>Plus applicable taxes. Valid only at ...</disclaimer> <exception>Exceptions for coupon 1 ...</exception>
+</coupon> <coupon id="2">
+<title>Coupon 2 Title</title> <deal>$99.00</deal> <descriptions>
+<description>
+Some description A for coupon 2 ...
+</description> <description>
+Some description B for coupon 2 ... </description>
+</descriptions> <services>
+<service>
+Service A for coupon 2 ...
+</service> <service>
+Service B for coupon 2 ... </service>
+
+</services>
+<disclaimer>Plus applicable taxes. Valid only at ...</disclaimer> <exception>Exceptions for coupon 2 ...</exception>
+</coupon> </coupons>
+</result>
